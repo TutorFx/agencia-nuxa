@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Luís Vaz',
+      title: 'Agência Nuxa',
       meta: [
         {
-          name: 'description', content: `Isso mesmo, você terá a oportunidade de
-          pegar minhas dicas e GANHAR DINHEIRO
-          em tempo real!`
+          name: 'description', content: `A Nuxa é uma agência digital que ajuda pequenos e médios negócios 
+          a se iniciarem no mundo digital. Com soluções personalizadas, ajudamos sua empresa a crescer 
+          e se destacar na internet.`
         }
       ],
     }
