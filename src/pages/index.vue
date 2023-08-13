@@ -22,7 +22,9 @@
             </div>
             <div class="max-lg:order-first h-full 2xl:col-span-2">
               <div class="aspect-[4/6] md:aspect-auto h-full">
-                <web3 />
+                <client-only>
+                  <web3 />
+                </client-only>
               </div>
             </div>
           </nuxa-container>
