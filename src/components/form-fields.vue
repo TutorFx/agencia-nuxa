@@ -1,25 +1,30 @@
 <template>
   <div class="grid gap-3">
     <label class="grid">
-      <span class="text-stone-300 mb-1">Nome: <span v-if="nomeError && isTouched" class="bg-red-500 px-1 rounded-md">{{
+      <span class="text-stone-300 mb-1 relative"><span v-if="nomeError && isTouched" class="bg-danger px-1 rounded-md absolute right-6 shadow-lg">{{
         nomeError }}</span></span>
-      <input v-model="state.nome" type="text" class="rounded-sm p-3">
+      <input v-model="state.nome" placeholder="Nome" type="text" class="bg-background-300 text-white px-9 py-6">
     </label>
     <label class="grid">
-      <span class="text-stone-300 mb-1">Email: <span v-if="emailError && isTouched" class="bg-red-500 px-1 rounded-md">{{
+      <span class="text-stone-300 mb-1 relative"><span v-if="emailError && isTouched" class="bg-danger px-1 rounded-md absolute right-6 shadow-lg"> <Icon name="mdi:warning" />{{
         emailError }}</span></span>
-      <input v-model="state.email" type="text" class="rounded-sm p-3">
+      <input v-model="state.email" placeholder="Email" type="text" class="bg-background-300 text-white px-9 py-6">
     </label>
     <label class="grid">
-      <span class="text-stone-300 mb-1">Whatsapp: <span v-if="celularError && isTouched"
-          class="bg-red-500 px-1 rounded-md">{{ celularError }}</span></span>
-      <input v-maska data-maska="['(##) ####-####', '(##) # ####-####']" v-model="state.celular" type="text"
-        class="rounded-sm p-3">
+      <span class="text-stone-300 mb-1 relative"><span v-if="celularError && isTouched"
+          class="bg-danger px-1 rounded-md absolute right-6 shadow-lg">{{ celularError }}</span></span>
+      <input v-maska placeholder="Whatsapp" data-maska="['(##) ####-####', '(##) # ####-####']" v-model="state.celular" type="text"
+        class="bg-background-300 text-white px-9 py-6">
+    </label>
+    <label class="grid">
+      <span class="text-stone-300 mb-1 relative"></span>
+      <textarea v-model="state.mensage" placeholder="Mensagem" type="text"
+        class="bg-background-300 text-white px-9 py-6"></textarea>
     </label>
     <div class="pt-6">
-      <button @click.prevent="trigger" class="bg-white px-4 py-2 font-black rounded-full max-sm:text-xs min-md:text-md"
+      <nuxa-button version="secondary" @click.prevent="trigger"
         type="submit"> Enviar
-      </button>
+      </nuxa-button>
     </div>
   </div>
 </template>
@@ -33,7 +38,7 @@ import { useToast } from 'vue-toastification'
 
 const schema = FormSchema();
 
-const default_value = { email: '', nome: '', celular: '' }
+const default_value = { email: '', nome: '', celular: '', mensage: '' }
 
 const state = ref({ ...default_value })
 const isTouched = ref(false)

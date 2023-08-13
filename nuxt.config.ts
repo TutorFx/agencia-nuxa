@@ -5,9 +5,7 @@ export default defineNuxtConfig({
       title: 'Agência Nuxa',
       meta: [
         {
-          name: 'description', content: `A Nuxa é uma agência digital que ajuda pequenos e médios negócios 
-          a se iniciarem no mundo digital. Com soluções personalizadas, ajudamos sua empresa a crescer 
-          e se destacar na internet.`
+          name: 'description', content: ``
         }
       ],
     }
@@ -17,6 +15,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     'nuxt-icon',
+    '@vueuse/motion/nuxt',
+    '@nuxt/content',
+    '@tresjs/nuxt'
   ],
   image: {
     screens: {
@@ -59,5 +60,9 @@ export default defineNuxtConfig({
       facebook: 'https://www.facebook.com/profile.php?id=100093435019657&mibextid=LQQJ4d'
     },
   },
-  devtools: { enabled: true }
+  experimental: { componentIslands: true },
+  devtools: { enabled: true },
+  extends: [
+    'github:TutorFx/sheets-api-nuxt-layer', // Extend from a git repository
+  ]
 })
