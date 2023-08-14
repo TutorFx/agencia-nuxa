@@ -23,8 +23,13 @@ module.exports = {
           '0%': { backgroundPosition: '200% 0' },
           'to': { backgroundPosition: '-200% 0' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
+        marquee: 'marquee 25s linear infinite',
         skeleton: 'skeleton-loading 2.0s ease-in-out infinite',
       },
       backgroundImage: (theme: any) => ({
