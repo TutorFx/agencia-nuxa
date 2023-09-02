@@ -32,21 +32,23 @@
 
           <nuxa-container class="grid gap-24 lg:gap-12">
             <nuxa-content title="TECNOLOGIA E INOVACAO" src="/assets/images/vr.jpg">
-              Ex elit esse occaecat exercitation voluptate proident sint ipsum. Est ex tempor consectetur dolore cupidatat
-              aute commodo anim id deserunt cupidatat. Voluptate consequat cupidatat veniam voluptate Lorem adipisicing ut
-              cillum commodo cillum eiusmod magna exercitation proident. In sunt adipisicing culpa ex incididunt laboris
-              magna do occaecat officia mollit nulla. Dolore officia dolore reprehenderit ut dolore aute.
+              No desenvolvimento de sites, a tecnologia e a inovação podem ser aplicadas em várias áreas, como design,
+              programação, otimização para mecanismos de busca (SEO) e marketing digital. Por exemplo, a tecnologia nos
+              permite criar sites responsivos que se adaptam automaticamente a diferentes tamanhos de tela, enquanto a
+              inovação nos permite encontrar maneiras criativas de apresentar conteúdo e interagir com os usuários da
+              forma mais performática possível.
               <template #action>
                 <nuxa-button>
                   Entrar em contato
                 </nuxa-button>
               </template>
             </nuxa-content>
-            <nuxa-content title="TECNOLOGIA E INOVACAO" src="/assets/images/tablet.jpg" reverted>
-              Ex elit esse occaecat exercitation voluptate proident sint ipsum. Est ex tempor consectetur dolore cupidatat
-              aute commodo anim id deserunt cupidatat. Voluptate consequat cupidatat veniam voluptate Lorem adipisicing ut
-              cillum commodo cillum eiusmod magna exercitation proident. In sunt adipisicing culpa ex incididunt laboris
-              magna do occaecat officia mollit nulla. Dolore officia dolore reprehenderit ut dolore aute.
+            <nuxa-content title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg" reverted>
+              Um site rápido pode ter um impacto significativo nas vendas, pois os usuários tendem a ficar mais tempo em
+              sites que carregam rapidamente e têm uma experiência de navegação mais suave. Além disso, a velocidade do
+              site é um dos fatores que o Google leva em consideração ao classificar os resultados de pesquisa, então um
+              site rápido pode ajudar a melhorar sua visibilidade nos resultados de pesquisa e atrair mais tráfego
+              orgânico para o seu site.
               <template #action>
                 <nuxa-button>
                   Entrar em contato
@@ -61,10 +63,10 @@
               <nuxa-title class="uppercase font-thin">na nuxa?</nuxa-title>
             </div>
             <div>
-              Nisi id fugiat culpa duis sint occaecat. Proident nisi et ullamco id cupidatat esse id ex velit anim ipsum
-              sit laborum. Amet duis duis fugiat ipsum. Consequat duis magna velit sit Lorem dolore pariatur quis veniam.
-              Amet dolor sit do sit ipsum aliquip aute quis fugiat minim amet ea. Dolore sunt nostrud sunt qui et occaecat
-              esse non laborum.
+              Combinamos tecnologia de ponta com criatividade e estratégia para criar soluções personalizadas que atendam
+              às necessidades específicas de cada cliente. Seja através do desenvolvimento de um site responsivo, da
+              criação de um aplicativo móvel ou da implementação de uma campanha de marketing digital bem-sucedida,
+              estamos sempre buscando maneiras de ajudar nossos clientes a se destacarem da concorrência.
             </div>
           </nuxa-container>
 
@@ -74,8 +76,7 @@
                 Web Site
               </template>
               <template #body>
-                Qui sint sunt eiusmod ea duis et anim aliquip nisi voluptate id. Nostrud labore dolore voluptate
-                voluptate. Eiusmod ut dolore velit amet occaecat consequat eu culpa id dolor enim.
+                Apresente sua marca para um público global com um site atraente e fácil de usar.
               </template>
               <template #action>
                 <nuxa-button>
@@ -88,8 +89,7 @@
                 Landing Page
               </template>
               <template #body>
-                Qui sint sunt eiusmod ea duis et anim aliquip nisi voluptate id. Nostrud labore dolore voluptate
-                voluptate. Eiusmod ut dolore velit amet occaecat consequat eu culpa id dolor enim.
+                Converta visitantes em leads ou clientes com uma landing page persuasiva.
               </template>
               <template #action>
                 <nuxa-button>
@@ -102,8 +102,7 @@
                 Back Office
               </template>
               <template #body>
-                Qui sint sunt eiusmod ea duis et anim aliquip nisi voluptate id. Nostrud labore dolore voluptate
-                voluptate. Eiusmod ut dolore velit amet occaecat consequat eu culpa id dolor enim.
+                Otimize suas operações e reduza custos com um back office eficiente.
               </template>
               <template #action>
                 <nuxa-button>
@@ -116,8 +115,7 @@
                 Aplicativo
               </template>
               <template #body>
-                Qui sint sunt eiusmod ea duis et anim aliquip nisi voluptate id. Nostrud labore dolore voluptate
-                voluptate. Eiusmod ut dolore velit amet occaecat consequat eu culpa id dolor enim.
+                Alcance e engaje clientes em seus dispositivos móveis com um aplicativo personalizado.
               </template>
               <template #action>
                 <nuxa-button>
@@ -129,11 +127,13 @@
         </div>
         <div
           class="grid isloading overflow-hidden absolute top-0 right-0 left-0 -z-[1] aspect-[3/6] sm:aspect-square xl:aspect-[1437/790] pointer-events-none">
-          <nuxt-img fit="cover" width="1437" height="790" class="w-full h-full hidden xl:block" src="/assets/images/hero.png" />
+          <nuxt-img fit="cover" width="1437" height="790" class="w-full h-full hidden xl:block"
+            src="/assets/images/hero.png" />
           <nuxt-img fit="cover" width="790" height="790" class="w-full h-full hidden sm:block xl:hidden"
             src="/assets/images/hero-tablet.png" />
-          <nuxt-img fit="cover" width="300" height="600" class="w-full h-full block sm:hidden" src="/assets/images/hero-mobile.png" />
+          <nuxt-img fit="cover" width="300" height="600" class="w-full h-full block sm:hidden"
+            src="/assets/images/hero-mobile.png" />
         </div>
       </div>
-    </section>
+  </section>
 </div></template>

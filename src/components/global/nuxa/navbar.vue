@@ -3,7 +3,9 @@
     <div :class="{ 'absolute': useRoute().path === '/' }" class="h-32 grid top-0 right-0 left-0 z-10">
       <nuxa-container
         class="grid grid-cols-[1fr_max-content] lg:grid-cols-[max-content_1fr_max-content] items-center gap-6 text-content">
-        <Icon name="Logotype" height="70" width="160" />
+        <NuxtLink to="/">
+          <Icon name="Logotype" height="70" width="160" />
+        </NuxtLink>
         <div class="grid justify-center">
           <atoms-menu v-model="menuVisible" />
         </div>
@@ -13,7 +15,9 @@
         <div class="fixed inset-0 z-10 bg-background/90 backdrop-blur-sm grid grid-rows-[max-content_1fr] grid-cols-1">
           <div class="h-32 bg-background grid">
             <nuxa-container class="grid grid-cols-[1fr_max-content] items-center gap-6">
-              <Icon name="Logotype" height="70" width="160" />
+              <NuxtLink to="/">
+                <Icon name="Logotype" height="70" width="160" />
+              </NuxtLink>
               <atoms-menu v-model="menuVisible" />
             </nuxa-container>
           </div>
@@ -33,7 +37,9 @@
         <div v-if="upperMove" class="h-32 shadow bg-background/70 backdrop-blur-lg grid">
           <nuxa-container
             class="grid grid-cols-[1fr_max-content] lg:grid-cols-[max-content_1fr_max-content] items-center gap-6 text-content">
-            <Icon name="Logotype" height="70" width="160" />
+            <NuxtLink to="/">
+              <Icon name="Logotype" height="70" width="160" />
+            </NuxtLink>
             <div class="grid justify-center">
               <atoms-menu v-model="menuVisible" />
             </div>

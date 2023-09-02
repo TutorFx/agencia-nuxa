@@ -4,7 +4,7 @@
       :style="{ top: `${mouseWithExtractor.y}px`, left: `${mouseWithExtractor.x}px`, opacity: isHovered && !isButtonHovered ? 1 : 0}">
       <div class="w-24 h-24 bg-nuxa rounded-full relative -translate-x-[50%] -translate-y-[50%]"  />
     </div>
-    <div class="grid justify-center bg-background-400/20 backdrop-blur-[80px] py-8 px-12 gap-6" ref="cardEl">
+    <div class="grid justify-center bg-background-400/20 backdrop-blur-[80px] py-8 px-12 gap-6 h-full items-start" ref="cardEl">
       <div v-if="src" class="p-2 rounded-full bg-background-500 pointer-events-none">
         <div class="aspect-square overflow-hidden h-48 w-48 rounded-full">
           <nuxt-img :src="src" fit="cover" width="192" height="192" />
