@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-        <div class="grid items-center">
+        <div class="grid items-center gap-3">
           <div>
             Social
           </div>

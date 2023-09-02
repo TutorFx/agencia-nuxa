@@ -129,10 +129,10 @@
         </div>
         <div
           class="grid isloading overflow-hidden absolute top-0 right-0 left-0 -z-[1] aspect-[3/6] sm:aspect-square xl:aspect-[1437/790] pointer-events-none">
-          <nuxt-img fit="cover" width="1437" height="790" class="w-full hidden xl:block" src="/assets/images/hero.png" />
-          <nuxt-img fit="cover" width="790" height="790" class="w-full hidden sm:block xl:hidden"
-            src="/assets/images/hero.png" />
-          <nuxt-img fit="cover" width="300" height="600" class="w-full block sm:hidden" src="/assets/images/hero.png" />
+          <nuxt-img fit="cover" width="1437" height="790" class="w-full h-full hidden xl:block" src="/assets/images/hero.png" />
+          <nuxt-img fit="cover" width="790" height="790" class="w-full h-full hidden sm:block xl:hidden"
+            src="/assets/images/hero-tablet.png" />
+          <nuxt-img fit="cover" width="300" height="600" class="w-full h-full block sm:hidden" src="/assets/images/hero-mobile.png" />
         </div>
       </div>
     </section>
