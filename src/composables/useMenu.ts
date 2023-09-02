@@ -17,7 +17,15 @@ export const useMenu = () => {
     },
     {
       title: 'Benefícios',
-      to: { name: 'projetos' }
+      to: { name: 'beneficios' }
     }
   ] as MenuType
+}
+
+export const useFooterMenu = () => {
+  return [
+    [...useMenu()],
+    [...useMenu()],
+    [...useMenu()],
+  ] as MenuType[]
 }

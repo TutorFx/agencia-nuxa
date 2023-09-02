@@ -7,11 +7,18 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
     'docs/content/**/*.md'
   ],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   theme: {
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans].join(','),
+      sans: ['Montserrat', ...defaultTheme.fontFamily.sans].join(','),
     },
     extend: {
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+      },
       height: {
         screen: ['100vh', '100dvh'],
       },
@@ -33,7 +40,7 @@ module.exports = {
         skeleton: 'skeleton-loading 2.0s ease-in-out infinite',
       },
       backgroundImage: (theme: any) => ({
-        'skeleton-gradient': `linear-gradient(45deg, ${colors.stone[950]}, ${colors.stone[900]}, ${colors.stone[800]}, ${colors.stone[900]}, ${colors.stone[950]})`,
+        'skeleton-gradient': `linear-gradient(45deg, #252035, #2d2a3d, #393545, #2d2a3d, #252035)`,
         'gradient': `linear-gradient(to bottom, #5B8DEF, #0063F7)`,
       }),
       backgroundSize: {
@@ -51,9 +58,15 @@ module.exports = {
         },
         'background': {
           'light': '#fff',
-          DEFAULT: '#000000',
-          400: '#1D1D1D',
-          300: '#282828'
+          DEFAULT: '#252035',
+          50: '#7768A4',
+          100: '#6C5D9B',
+          200: '#5A4E81',
+          300: '#493F68',
+          400: '#372F4E',
+          500: '#252035',
+          600: '#0D0B12',
+          700: '#000000',
         },
         'nuxa': {
           DEFAULT: '#F42272',
@@ -70,7 +83,7 @@ module.exports = {
           950: '#18010A'
         },
         'content': {
-          DEFAULT: '#000000'
+          DEFAULT: '#fff'
         },
         'danger': {
           DEFAULT: '#EB5757'

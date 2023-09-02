@@ -16,8 +16,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-icon',
     '@vueuse/motion/nuxt',
+    'nuxt-simple-sitemap',
     '@nuxt/content',
-    '@tresjs/nuxt'
   ],
   image: {
     screens: {
@@ -38,11 +38,11 @@ export default defineNuxtConfig({
         src: 'src/templates/app.html',
       }
     ],
-    transpile: ['vue-toastification'],
   },
   css: ['@/assets/styles.scss'],
   routeRules: {
     '/': { static: true },
+    '/beneficios/**': { isr: true }
   },
   vite: {
     css: {

@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div class="min-h-[100dvh] max-w-[1920px] mx-auto grid items-start grid-rows-[max-content_1fr] grid-cols-1">
-      <nuxa-navbar class=" relative z-10" />
+    <div class="min-h-[100dvh] max-w-[1460px] mx-auto grid items-start grid-rows-[max-content_1fr_max-content] grid-cols-1 relative">
+      <nuxa-navbar class="relative" />
       <slot />
+      <nuxa-footer />
     </div>
   </div>
 </template>

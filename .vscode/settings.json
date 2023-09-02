@@ -5,5 +5,9 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "markdown-image.base.fileFormat": "jpg",
+  "markdown-image.local.path": "/src/public/assets/blog",
+  "markdown-image.local.referencePath": "/assets/blog/",
+  "markdown-image.base.fileNameFormat": "${hash}-nuxa"
 }

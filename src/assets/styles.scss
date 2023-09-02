@@ -2,7 +2,7 @@
 
 @layer base {
   html {
-    //@apply text-white;
+    @apply text-content bg-background;
   } 
 }
 
@@ -17,6 +17,10 @@
   .container {
     @apply mx-auto max-w-5xl;
   }
+}
+
+:root {
+  color-scheme: dark;
 }
 
 .golden-bg {
