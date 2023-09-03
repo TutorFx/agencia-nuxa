@@ -21,11 +21,11 @@ watch(() => useRoute().path, () => {
 <template>
   <div>
     <div class="hidden md:flex gap-6 links">
-      <nuxt-link v-for="(item, i) in useMenu()" :key="i" :to="item.to">
+      <nuxt-link :aria-label="`Vá para a página ${item.title}`" v-for="(item, i) in useMenu()" :key="i" :to="item.to">
         <div class="text-content text-xl font-medium leading-tight">{{ item.title }}</div>
       </nuxt-link>
     </div>
-    <button class="md:hidden flex" @click.prevent="menuVisible = !menuVisible">
+    <button :alt="`${!menuVisible ? 'Abrir' : 'Fechar'} menu`" class="md:hidden flex" @click.prevent="menuVisible = !menuVisible">
       <Icon v-if="!menuVisible" name="line-md:menu" class="text-content" size="48" />
       <Icon v-else name="line-md:close-small" class="text-content" size="48" />
     </button>

@@ -31,7 +31,7 @@
           <nuxa-marqee />
 
           <nuxa-container class="grid gap-24 lg:gap-12">
-            <nuxa-content title="TECNOLOGIA E INOVACAO" src="/assets/images/vr.jpg">
+            <nuxa-content title="TECNOLOGIA E INOVAÇÃO" src="/assets/images/vr.jpg" alt="Homem usando óculos de realidade virtual">
               No desenvolvimento de sites, a tecnologia e a inovação podem ser aplicadas em várias áreas, como design,
               programação, otimização para mecanismos de busca (SEO) e marketing digital. Por exemplo, a tecnologia nos
               permite criar sites responsivos que se adaptam automaticamente a diferentes tamanhos de tela, enquanto a
@@ -43,7 +43,7 @@
                 </nuxa-button>
               </template>
             </nuxa-content>
-            <nuxa-content title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg" reverted>
+            <nuxa-content title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg" alt="Mulher interage com tablet" reverted>
               Um site rápido pode ter um impacto significativo nas vendas, pois os usuários tendem a ficar mais tempo em
               sites que carregam rapidamente e têm uma experiência de navegação mais suave. Além disso, a velocidade do
               site é um dos fatores que o Google leva em consideração ao classificar os resultados de pesquisa, então um

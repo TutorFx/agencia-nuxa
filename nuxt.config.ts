@@ -8,6 +8,9 @@ export default defineNuxtConfig({
           name: 'description', content: ``
         }
       ],
+      htmlAttrs: {
+        lang: 'pt-BR'
+      }
     }
   },
   srcDir: 'src/',
@@ -17,6 +20,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@vueuse/motion/nuxt',
     'nuxt-simple-sitemap',
+    'nuxt-simple-robots',
     '@nuxt/content',
   ],
   image: {
@@ -62,6 +66,10 @@ export default defineNuxtConfig({
   },
   experimental: { componentIslands: true },
   devtools: { enabled: true },
+  nitro: {
+    preset: "vercel",
+    experimental: { openAPI: true },
+  },
   extends: [
     'github:TutorFx/sheets-api-nuxt-layer', // Extend from a git repository
   ]

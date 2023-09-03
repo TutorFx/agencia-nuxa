@@ -5,7 +5,7 @@
 
       <div
         class="isloading aspect-square min-w-full overflow-hidden rounded-2xl md:rounded-tl-[240px] md:rounded-tr-[100px] md:rounded-bl-[100px] md:rounded-br-[240px] shadow">
-        <nuxt-img lazy height="540" width="540" class="w-full h-full" :src="src" />
+        <nuxt-img lazy height="540" :alt="alt ?? title" width="540" class="w-full h-full" :src="src" />
       </div>
 
     </div>
@@ -30,5 +30,6 @@ withDefaults(defineProps<{
   src?: string,
   title: string,
   reverted?: boolean,
+  alt?: string
 }>(), { src: 'https://via.placeholder.com/540x540', reverted: false })
 </script>
