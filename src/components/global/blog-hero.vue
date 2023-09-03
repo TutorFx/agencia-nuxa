@@ -5,7 +5,7 @@
     </div>
     <div class="grid items-center">
       <div>
-        <div class="grid gap-3">
+        <div class="grid gap-3 prose prose-a:decoration-transparent prose-a:font-extrabold prose-a:text-content prose-h1:text-white prose-h2:text-white">
           <slot />
         </div>
       </div>
