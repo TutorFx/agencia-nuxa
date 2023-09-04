@@ -16,6 +16,15 @@
 </template>
 
 <script lang="ts" setup>
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
+interface ParsedBenefit extends ParsedContent {
+  title: string,
+  description: string,
+  image: string,
+  updatedAt: string,
+}
+
 const props = defineProps<{
   modelValue?: string,
 }>();
@@ -30,7 +39,7 @@ const search = computed({
   }
 })
 
-const { data, refresh } = await useAsyncData('list', () => queryContent('/beneficios').find(), { immediate: true })
+const { data, refresh } = await useAsyncData('list', () => queryContent<ParsedBenefit>('/beneficios').find(), { immediate: true })
 
 const query = computed(() => data.value?.filter((val, index) => {
   try {

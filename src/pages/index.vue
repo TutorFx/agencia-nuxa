@@ -79,7 +79,7 @@
                 Apresente sua marca para um público global com um site atraente e fácil de usar.
               </template>
               <template #action>
-                <nuxa-button>
+                <nuxa-button to="/beneficios/webpage">
                   Saiba mais
                 </nuxa-button>
               </template>
@@ -92,7 +92,7 @@
                 Converta visitantes em leads ou clientes com uma landing page persuasiva.
               </template>
               <template #action>
-                <nuxa-button>
+                <nuxa-button to="/beneficios/landing-page">
                   Saiba mais
                 </nuxa-button>
               </template>
@@ -105,7 +105,7 @@
                 Otimize suas operações e reduza custos com um back office eficiente.
               </template>
               <template #action>
-                <nuxa-button>
+                <nuxa-button to="/beneficios/backoffice" >
                   Saiba mais
                 </nuxa-button>
               </template>
@@ -118,7 +118,7 @@
                 Alcance e engaje clientes em seus dispositivos móveis com um aplicativo personalizado.
               </template>
               <template #action>
-                <nuxa-button>
+                <nuxa-button to="/beneficios/aplicativo">
                   Saiba mais
                 </nuxa-button>
               </template>

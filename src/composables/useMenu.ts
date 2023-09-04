@@ -12,10 +12,6 @@ export const useMenu = () => {
       to: { name: 'index' }
     },
     {
-      title: 'Experiencia',
-      to: { name: 'resumo' }
-    },
-    {
       title: 'Benefícios',
       to: { name: 'beneficios' }
     }

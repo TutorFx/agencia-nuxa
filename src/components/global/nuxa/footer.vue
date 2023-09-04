@@ -1,29 +1,40 @@
 <template>
   <div class="">
-    <nuxa-container class="mt-32 py-12 grid gap-8">
-
-      <div class="grid md:grid-cols-5 gap-3">
+    <nuxa-container class="mt-32 py-12 grid gap-6 md:gap-3">
+      <div class="grid md:grid-cols-5 gap-6 max-sm:text-center">
         <nuxt-link to="/" aria-label="Vá para a homepage da Nuxa">
           <Icon name="Logo" size="128" class="grayscale hover:grayscale-0" />
         </nuxt-link>
         <div v-for="(menu, i) in useFooterMenu()" class="grid gap-1 items-center" :key="i">
           <div>
-            <div class="grid gap-3">
+            <div class="grid gap-6 md:gap-3">
               <div v-for="(link, x) in menu" :key="`${x}-${i}`">
                 <nuxt-link :to="link.to" :aria-label="`Vá para ${link.title}`">{{ link.title }}</nuxt-link>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid items-center gap-3">
+        <div class="grid items-center">
           <div>
-            Social
-          </div>
-          <div class="grid grid-flow-col">
-            <Icon name="cib:instagram"></Icon>
-            <Icon name="cib:facebook"></Icon>
-            <Icon name="cib:github"></Icon>
-            <Icon name="cib:youtube"></Icon>
+            <div class="grid items-center gap-6 md:gap-3">
+              <div>
+                Social
+              </div>
+              <div class="grid grid-flow-col max-sm:text-center">
+                <div>
+                  <Icon name="cib:instagram"></Icon>
+                </div>
+                <div>
+                  <Icon name="cib:facebook"></Icon>
+                </div>
+                <div>
+                  <Icon name="cib:github"></Icon>
+                </div>
+                <div>
+                  <Icon name="cib:youtube"></Icon>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
