@@ -23,7 +23,7 @@ const secondaryStyles = {
   inside: 'text-center text-white text-xl font-light leading-[30px]'
 }
 const outlinedStyles = {
-  outside: 'px-[38px] py-[16px] shadow rounded-full border border-white justify-center items-center gap-2.5 inline-flex',
+  outside: 'px-6 py-3 shadow rounded-full border border-white justify-center items-center gap-2.5 inline-flex',
   inside: 'text-center text-white text-md font-medium uppercase'
 }
 

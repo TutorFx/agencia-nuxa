@@ -70,7 +70,7 @@
             </div>
           </nuxa-container>
 
-          <nuxa-container class="grid gap-6 lg:grid-cols-4">
+          <nuxa-container class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             <nuxa-card src="">
               <template #head>
                 Web Site
