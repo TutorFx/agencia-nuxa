@@ -71,7 +71,7 @@
           </nuxa-container>
 
           <nuxa-container class="grid gap-6 lg:grid-cols-4">
-            <lazy-nuxa-card src="">
+            <nuxa-card src="">
               <template #head>
                 Web Site
               </template>
@@ -83,8 +83,8 @@
                   Saiba mais
                 </nuxa-button>
               </template>
-            </lazy-nuxa-card>
-            <lazy-nuxa-card src="">
+            </nuxa-card>
+            <nuxa-card src="">
               <template #head>
                 Landing Page
               </template>
@@ -96,8 +96,8 @@
                   Saiba mais
                 </nuxa-button>
               </template>
-            </lazy-nuxa-card>
-            <lazy-nuxa-card src="">
+            </nuxa-card>
+            <nuxa-card src="">
               <template #head>
                 Back Office
               </template>
@@ -109,8 +109,8 @@
                   Saiba mais
                 </nuxa-button>
               </template>
-            </lazy-nuxa-card>
-            <lazy-nuxa-card src="">
+            </nuxa-card>
+            <nuxa-card src="">
               <template #head>
                 Aplicativo
               </template>
@@ -122,7 +122,7 @@
                   Saiba mais
                 </nuxa-button>
               </template>
-            </lazy-nuxa-card>
+            </nuxa-card>
           </nuxa-container>
         </div>
         <div
