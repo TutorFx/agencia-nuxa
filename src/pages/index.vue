@@ -38,9 +38,11 @@
               inovação nos permite encontrar maneiras criativas de apresentar conteúdo e interagir com os usuários da
               forma mais performática possível.
               <template #action>
-                <nuxa-button :to="{ name:'contato' }">
-                  Entrar em contato
-                </nuxa-button>
+                <div>
+                  <nuxa-button class="max-sm:block" :to="{ name:'contato' }">
+                    Entrar em contato
+                  </nuxa-button>
+                </div>
               </template>
             </nuxa-content>
             <nuxa-content title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg" alt="Mulher interage com tablet" reverted>
@@ -50,9 +52,11 @@
               site rápido pode ajudar a melhorar sua visibilidade nos resultados de pesquisa e atrair mais tráfego
               orgânico para o seu site.
               <template #action>
-                <nuxa-button :to="{ name:'contato' }">
-                  Entrar em contato
-                </nuxa-button>
+                <div>
+                  <nuxa-button class="max-sm:block" :to="{ name:'contato' }">
+                    Entrar em contato
+                  </nuxa-button>
+                </div>
               </template>
             </nuxa-content>
           </nuxa-container>

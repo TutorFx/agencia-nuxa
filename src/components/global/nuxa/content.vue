@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-2 justify-center gap-12 group max-w-5xl mx-auto">
-    <div class="relative transition-all hover:ease-in-expo ease-out-expo duration-300"
+  <div class="grid grid-cols-1 lg:grid-cols-12 justify-center gap-12 group">
+    <div class="lg:col-span-6 xl:col-span-5 relative transition-all hover:ease-in-expo ease-out-expo duration-300"
       :class="{ 'group-hover:rotate-3': reverted, 'group-hover:-rotate-3': !reverted }">
 
       <div
@@ -9,7 +9,7 @@
       </div>
 
     </div>
-    <div class="grid items-center" :class="{ 'lg:-order-1': reverted }">
+    <div class="lg:col-span-6 xl:col-span-7 grid items-center" :class="{ 'lg:-order-1': reverted}">
       <div>
         <div class="grid gap-6">
           <div class="max-md:text-center">
