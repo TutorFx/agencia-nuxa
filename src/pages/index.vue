@@ -16,7 +16,7 @@
                   loja virtual ou criar um blog, você pode fazer tudo isso com nuxa.
                 </div>
                 <div class="flex gap-6 items-center group justify-center md:justify-start">
-                  <nuxa-button>conheça nossas vantagens</nuxa-button>
+                  <nuxa-button :to="{ name:'contato' }">conheça nossas vantagens</nuxa-button>
                   <div class="hidden md:block">
                     <Icon size="64" name="mdi-light:arrow-right"
                       class="relative transition-all left-0 group-hover:left-6 ease-in-expo duration-300" />
@@ -38,7 +38,7 @@
               inovação nos permite encontrar maneiras criativas de apresentar conteúdo e interagir com os usuários da
               forma mais performática possível.
               <template #action>
-                <nuxa-button>
+                <nuxa-button :to="{ name:'contato' }">
                   Entrar em contato
                 </nuxa-button>
               </template>
@@ -50,7 +50,7 @@
               site rápido pode ajudar a melhorar sua visibilidade nos resultados de pesquisa e atrair mais tráfego
               orgânico para o seu site.
               <template #action>
-                <nuxa-button>
+                <nuxa-button :to="{ name:'contato' }">
                   Entrar em contato
                 </nuxa-button>
               </template>

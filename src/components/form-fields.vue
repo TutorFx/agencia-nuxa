@@ -1,28 +1,35 @@
 <template>
   <div class="grid gap-3">
+    <nuxa-title class="max-w-md">
+      ENTRE EM CONTATO
+      <span class="font-thin">COM NOSSA EQUIPE</span>
+    </nuxa-title>
+    <p>
+
+    </p>
     <label class="grid">
       <span class="text-stone-300 mb-1 relative"><span v-if="nomeError && isTouched" class="bg-danger px-1 rounded-md absolute right-6 shadow-lg">{{
         nomeError }}</span></span>
-      <input v-model="state.nome" placeholder="Nome" type="text" class="bg-background-300 text-white px-9 py-6">
+      <input v-model="state.nome" placeholder="Nome" type="text" class="bg-background-300 text-white px-6 py-3">
     </label>
     <label class="grid">
-      <span class="text-stone-300 mb-1 relative"><span v-if="emailError && isTouched" class="bg-danger px-1 rounded-md absolute right-6 shadow-lg"> <Icon name="mdi:warning" />{{
+      <span class="text-stone-300 mb-1 relative"><span v-if="emailError && isTouched" class="bg-danger px-1 rounded-md absolute right-6 shadow-lg">{{
         emailError }}</span></span>
-      <input v-model="state.email" placeholder="Email" type="text" class="bg-background-300 text-white px-9 py-6">
+      <input v-model="state.email" placeholder="Email" type="text" class="bg-background-300 text-white px-6 py-3">
     </label>
     <label class="grid">
       <span class="text-stone-300 mb-1 relative"><span v-if="celularError && isTouched"
           class="bg-danger px-1 rounded-md absolute right-6 shadow-lg">{{ celularError }}</span></span>
       <input v-maska placeholder="Whatsapp" data-maska="['(##) ####-####', '(##) # ####-####']" v-model="state.celular" type="text"
-        class="bg-background-300 text-white px-9 py-6">
+        class="bg-background-300 text-white px-6 py-3">
     </label>
     <label class="grid">
       <span class="text-stone-300 mb-1 relative"></span>
       <textarea v-model="state.mensage" placeholder="Mensagem" type="text"
-        class="bg-background-300 text-white px-9 py-6"></textarea>
+        class="bg-background-300 text-white px-6 py-3"></textarea>
     </label>
     <div class="pt-6">
-      <nuxa-button version="secondary" @click.prevent="trigger"
+      <nuxa-button version="primary" @click.prevent="trigger"
         type="submit"> Enviar
       </nuxa-button>
     </div>

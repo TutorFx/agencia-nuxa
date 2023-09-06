@@ -9,7 +9,7 @@
         <div class="grid justify-center">
           <atoms-menu v-model="menuVisible" />
         </div>
-        <nuxa-button version="outlined" class="hidden lg:block">faça um orcamento</nuxa-button>
+        <nuxa-button version="outlined" :to="{name: 'contato'}" class="hidden lg:block">faça um orcamento</nuxa-button>
       </nuxa-container>
       <teleport v-if="menuVisible" to="body">
         <div class="fixed inset-0 z-10 bg-background/90 backdrop-blur-sm grid grid-rows-[max-content_1fr] grid-cols-1">

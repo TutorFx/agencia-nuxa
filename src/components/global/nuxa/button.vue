@@ -7,12 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtLinkProps } from '#app';
+import { RouteLocationRaw } from '#vue-router';
 
 type Style = 'primary' | 'secondary' | 'outlined'
 
 const NuxtLink = resolveComponent('NuxtLink')
-const props = defineProps<{ to?: NuxtLinkProps | string, version?: Style }>()
+const props = defineProps<{ to?: RouteLocationRaw | string, version?: Style }>()
 
 const primaryStyles = {
   outside: 'px-[38px] py-[16px] shadow active:bg-nuxa-700 hover:bg-nuxa-400 rounded-full bg-nuxa-500 border-white justify-center items-center gap-2.5 inline-flex',

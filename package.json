@@ -23,6 +23,7 @@
     "volar-service-vetur": "^0.0.10"
   },
   "dependencies": {
+    "@nuxthq/ui": "^2.7.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",

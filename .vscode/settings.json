@@ -9,5 +9,15 @@
   "markdown-image.base.fileFormat": "jpg",
   "markdown-image.local.path": "/src/public/assets/blog",
   "markdown-image.local.referencePath": "/assets/blog/",
-  "markdown-image.base.fileNameFormat": "${hash}-nuxa"
+  "markdown-image.base.fileNameFormat": "${hash}-nuxa",
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],  
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "ui"
+  ],
 }
