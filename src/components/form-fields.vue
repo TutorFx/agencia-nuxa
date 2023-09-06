@@ -25,7 +25,7 @@
     </label>
     <label class="grid">
       <span class="text-stone-300 mb-1 relative"></span>
-      <textarea v-model="state.mensage" placeholder="Mensagem" type="text"
+      <textarea v-model="state.message" placeholder="Mensagem" type="text"
         class="bg-background-300 text-white px-6 py-3"></textarea>
     </label>
     <div class="pt-6">
@@ -45,7 +45,7 @@ import { useToast } from 'vue-toastification'
 
 const schema = FormSchema();
 
-const default_value = { email: '', nome: '', celular: '', mensage: '' }
+const default_value = { email: '', nome: '', celular: '', message: '' }
 
 const state = ref({ ...default_value })
 const isTouched = ref(false)
