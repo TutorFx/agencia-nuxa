@@ -16,6 +16,7 @@
     "@types/locomotive-scroll": "^4.1.0",
     "@types/node": "^18.16.19",
     "@types/three": "^0.155.0",
+    "@types/uuid": "^9.0.3",
     "nuxt": "3.7.0",
     "nuxt-icon": "^0.4.2",
     "nuxt-simple-robots": "^3.1.2",
@@ -37,6 +38,7 @@
     "sass": "^1.64.0",
     "swiper": "^10.1.0",
     "tailwindcss": "^3.3.3",
+    "uuid": "^9.0.0",
     "vue-toastification": "^2.0.0-rc.5",
     "zod": "^3.21.4"
   }
