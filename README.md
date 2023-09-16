@@ -1,63 +1,72 @@
-# Nuxt 3 Minimal Starter
+# Agência Nuxa - Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Confira a documentação do Nuxt 3 para aprender mais.
 
-## Setup
+## Configuração
 
-Make sure to install the dependencies:
+Certifique-se de instalar as dependências:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
 ```
 
-## Development Server
+## Servidor de Desenvolvimento
 
-Start the development server on `http://localhost:3000`:
+Inicie o servidor de desenvolvimento em `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
 ```
 
-## Production
+## Produção
 
-Build the application for production:
+Construa a aplicação para produção:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
 yarn build
 ```
 
-Locally preview production build:
+Visualize localmente a construção de produção:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
 yarn preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Confira a documentação de implantação para mais informações.
+
+## Configuração do Projeto Agência Nuxa
+
+Para iniciar o projeto, você precisará configurar algumas variáveis de ambiente no arquivo `.env`. Aqui estão as variáveis necessárias:
+
+```
+private_key: <sua chave privada>
+client_email: <seu email do cliente>
+SHEET_ID: <seu ID da planilha>
+```
+
+Substitua `<sua chave privada>`, `<seu email do cliente>` e `<seu ID da planilha>` pelos valores correspondentes.
+
+## Como obter as credenciais da API do Google Sheets
+
+Para obter as credenciais da API do Google Sheets, você pode seguir os seguintes passos:
+
+1. Faça login com sua conta do Google na área reservada onde permite configurar APIs do Google, a partir deste URL: console.cloud.google.com/apis/library.
+2. Se você já tem projetos criados, basta clicar no projeto selecionado e depois, clicar em NOVO PROJETO. Caso não tenha nenhum projeto criado, basta pesquisar por novo projeto e criar um novo projeto.
+3. Informe o nome do projeto e clique em CRIAR.
+4. Após o projeto ser criado, você será direcionado para a tela de permissão OAuth.
+5. Você deve primeiramente, clicar em selecionar projeto, para que seja selecionado o projeto que você acabou de criar.
+6. Escolha a opção Externo e clique em Criar.
+7. Ao clicar em Criar no passo 6, você verá a tela seguinte, e precisará fornecer as devidas informações; após fornecer os dados obrigatórios, ao final da página clique em Salvar e continuar.
+8. Na próxima tela, clique em salvar para as etapas e na última clique em Voltar para o painel no final da página.
+9. Agora, você precisará ativar as APIs do google drive e Google Sheets, então vá em APIs e serviços ativos e clique em ATIVAR APIS E SERVIÇOS.
+10. Procure pelas APIS do Google Drive e Google Sheets para ativar.
+11. Clique para Ativar a API Google Sheets.
+12. Clique para Ativar a API Google Drive API.
+
+### Usando credenciais em ambiente local:
+
+1. Após ter ativado as APIs, clique na opção “Credenciais”.
+2. Clique em "CRIAR CREDENCIAIS" e depois "ID do Cliente OAUTH".
+3. Selecione a opção “App para computador”.
+4. Informe o nome e clique no botão “CRIAR”.
+5. Baixe o arquivo JSON.
