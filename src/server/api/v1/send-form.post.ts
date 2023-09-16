@@ -1,6 +1,7 @@
-import { google } from 'googleapis';
-import { FormDefaults, FormSchema, IFormData } from '../utils';
-import { schema, ZodError } from 'zod';
+import { google } from 'googleapis'
+import { ZodError } from 'zod'
+import type { IFormData } from '../utils'
+import { FormDefaults, FormSchema } from '../utils'
 
 export default defineEventHandler(async (event) => {
   const host = getHeader(event, 'host')
@@ -10,12 +11,11 @@ export default defineEventHandler(async (event) => {
   const state = stateHeader ? decodeURIComponent(stateHeader) : '-'
   const ipHeader = getHeader(event, 'x-forwarded-for')
   const ip = ipHeader ? ipHeader.split(',')[0] : '-'
-  const body = await readBody<IFormData>(event);
+  const body = await readBody<IFormData>(event)
   const Defaults = FormDefaults()
   const schema = FormSchema()
 
   try {
-
     schema.parse(body)
 
     const auth = new google.auth.JWT(
@@ -25,21 +25,21 @@ export default defineEventHandler(async (event) => {
       ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/drive']
     )
 
-    const sheets = google.sheets({ version: 'v4', auth });
+    const sheets = google.sheets({ version: 'v4', auth })
 
-    const FilterResponse = Object.assign(Defaults, {...body, celular: body.celular.replaceAll('+','')})
+    const FilterResponse = Object.assign(Defaults, { ...body, celular: body.celular.replaceAll('+', '') })
 
-    // @ts-expect-error
+    // @ts-expect-error Google is a worst programmed api
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       range: 'Cadastro!A3',
-      valueInputOption: "USER_ENTERED",
+      valueInputOption: 'USER_ENTERED',
       resource: {
         values: [
-          [...Object.values(FilterResponse), new Date, ip, city, state, host]
+          [...Object.values(FilterResponse), new Date(), ip, city, state, host]
         ]
       }
-    });
+    })
     return { message: 'Sucesso!' }
   } catch (e) {
     console.log(e)
@@ -52,6 +52,6 @@ export default defineEventHandler(async (event) => {
         statusCode: 500,
         statusMessage: 'Erro ao cadastrar!'
       })
-    );
+    )
   }
 })

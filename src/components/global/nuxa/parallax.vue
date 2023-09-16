@@ -1,6 +1,6 @@
 <template>
-  <div class="rounded-3xl relative overflow-hidden">
-    <div class="aspect-square md:aspect-video bg-fixed bg-cover translate-z-20" :style="backgroundStyles"></div>
+  <div class="relative overflow-hidden rounded-3xl">
+    <div class="translate-z-20 aspect-square bg-cover bg-fixed md:aspect-video" :style="backgroundStyles" />
   </div>
 </template>
 

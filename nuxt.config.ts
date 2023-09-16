@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       title: 'Agência Nuxa',
       meta: [
         {
-          name: 'description', content: ``
+          name: 'description', content: ''
         }
       ],
       htmlAttrs: {
@@ -16,12 +16,13 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/eslint-module',
     '@nuxt/image',
     'nuxt-icon',
     '@vueuse/motion/nuxt',
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
-    '@nuxt/content',
+    '@nuxt/content'
   ],
   image: {
     screens: {
@@ -34,14 +35,17 @@ export default defineNuxtConfig({
       '2xl': 1536
     },
     format: ['webp'],
-    densities: [1, 2, 3],
+    densities: [1, 2, 3]
   },
   build: {
     templates: [
       {
-        src: 'src/templates/app.html',
+        src: 'src/templates/app.html'
       }
-    ],
+    ]
+  },
+  eslint: {
+    emitWarning: false
   },
   css: ['@/assets/styles.scss'],
   routeRules: {
@@ -52,25 +56,25 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/mixins.scss";',
-        },
-      },
-    },
+          additionalData: '@import "@/assets/mixins.scss";'
+        }
+      }
+    }
   },
   runtimeConfig: {
     public: {
       youtube: 'https://www.youtube.com/LuisVazTrader',
       instagram: 'https://instagram.com/oluisvaz',
       facebook: 'https://www.facebook.com/profile.php?id=100093435019657&mibextid=LQQJ4d'
-    },
+    }
   },
   experimental: { componentIslands: true },
   devtools: { enabled: true },
   nitro: {
-    preset: "vercel",
-    experimental: { openAPI: true },
+    preset: 'vercel',
+    experimental: { openAPI: true }
   },
   extends: [
-    'github:TutorFx/sheets-api-nuxt-layer', // Extend from a git repository
+    'github:TutorFx/sheets-api-nuxt-layer' // Extend from a git repository
   ]
 })

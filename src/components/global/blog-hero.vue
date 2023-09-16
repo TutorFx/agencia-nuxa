@@ -1,11 +1,11 @@
 <template>
-  <div class="grid gap-12 mb-12 lg:grid-cols-2 lg:gap-24 lg:mb-24">
-    <div v-if="src" class="aspect-square isloading min-w-xl isloading overflow-hidden rounded-2xl md:rounded-tl-[240px] md:rounded-tr-[100px] md:rounded-bl-[100px] md:rounded-br-[240px]">
-      <nuxt-img fit="cover" class="w-full h-full" width="500" height="500" :src="src"></nuxt-img>
+  <div class="mb-12 grid gap-12 lg:mb-24 lg:grid-cols-2 lg:gap-24">
+    <div v-if="src" class="isloading min-w-xl isloading aspect-square overflow-hidden rounded-2xl md:rounded-bl-[100px] md:rounded-br-[240px] md:rounded-tl-[240px] md:rounded-tr-[100px]">
+      <nuxt-img fit="cover" class="h-full w-full" width="500" height="500" :src="src" />
     </div>
     <div class="grid items-center">
       <div>
-        <div class="prose prose-a:decoration-transparent prose-p:text-xl prose-a:font-extrabold prose-a:text-content prose-h1:text-white prose-h2:text-white prose-p:leading-9">
+        <div class="prose prose-h1:text-white prose-h2:text-white prose-p:text-xl prose-p:leading-9 prose-a:font-extrabold prose-a:text-content prose-a:decoration-transparent">
           <slot />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { RouteLocationRaw } from "../../.nuxt/vue-router"
+import type { RouteLocationRaw } from '../../.nuxt/vue-router'
 
 export type MenuType = {
   title: string,
@@ -24,17 +24,17 @@ export const useMenu = () => {
 
 const getDocumentos = async () => {
   const data = await queryContent('/documento').find()
-  return data.map((documento) => ({ to: documento._path, title: documento.title }))
+  return data.map(documento => ({ to: documento._path, title: documento.title }))
 }
 
 const getBlogPosts = async () => {
   const data = await queryContent('/blog').find()
-  return data.map((documento) => ({ to: documento._path, title: documento.title }))
+  return data.map(documento => ({ to: documento._path, title: documento.title }))
 }
 
 const getBeneficios = async () => {
   const data = await queryContent('/beneficios').find()
-  return data.map((documento) => ({ to: documento._path, title: documento.title }))
+  return data.map(documento => ({ to: documento._path, title: documento.title }))
 }
 
 export const useFooterMenu = async () => {
@@ -43,6 +43,6 @@ export const useFooterMenu = async () => {
     Links: [...useMenu()],
     Blog: [...blogposts],
     Documentos: [...documentos],
-    'Benefícios': [...beneficios]
+    Benefícios: [...beneficios]
   } as MenuTypeObject<MenuType>
 }

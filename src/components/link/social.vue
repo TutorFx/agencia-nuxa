@@ -7,8 +7,8 @@ defineProps<{
 
 <template>
   <nuxt-link :to="url">
-    <div class="p-2 px-3 bg-background-400 rounded-xl">
-      <Icon :name="icon"></Icon>
+    <div class="rounded-xl bg-background-400 p-2 px-3">
+      <Icon :name="icon" />
     </div>
   </nuxt-link>
 </template>

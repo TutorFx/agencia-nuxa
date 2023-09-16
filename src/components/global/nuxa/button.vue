@@ -1,5 +1,5 @@
 <template>
-  <component class="select-none" :class="style.outside" :is="to ? NuxtLink : 'div'" :to="to">
+  <component :is="to ? NuxtLink : 'div'" class="select-none" :class="style.outside" :to="to">
     <div class="select-none" :class="style.inside">
       <slot />
     </div>
@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouteLocationRaw } from '#vue-router';
+import type { RouteLocationRaw } from '#vue-router'
 
 type Style = 'primary' | 'secondary' | 'outlined'
 
@@ -30,11 +30,11 @@ const outlinedStyles = {
 const style = computed(() => {
   switch (props.version) {
     case 'outlined':
-      return outlinedStyles;
+      return outlinedStyles
     case 'secondary':
-      return secondaryStyles;
+      return secondaryStyles
     default: {
-      return primaryStyles;
+      return primaryStyles
     }
   }
 })

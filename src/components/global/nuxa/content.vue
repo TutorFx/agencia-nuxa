@@ -1,21 +1,29 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-12 justify-center gap-12 group">
-    <div class="lg:col-span-6 xl:col-span-5 relative transition-all hover:ease-in-expo ease-out-expo duration-300"
-      :class="{ 'group-hover:rotate-3': reverted, 'group-hover:-rotate-3': !reverted }">
-
+  <div class="group grid grid-cols-1 justify-center gap-12 lg:grid-cols-12">
+    <div
+      class="relative transition-all duration-300 ease-out-expo hover:ease-in-expo lg:col-span-6 xl:col-span-5"
+      :class="{ 'group-hover:rotate-3': reverted, 'group-hover:-rotate-3': !reverted }"
+    >
       <div
-        class="isloading aspect-square min-w-full overflow-hidden rounded-2xl md:rounded-tl-[240px] md:rounded-tr-[100px] md:rounded-bl-[100px] md:rounded-br-[240px] shadow">
-        <nuxt-img lazy height="540" :alt="alt ?? title" width="540" class="w-full h-full" :src="src" />
+        class="isloading aspect-square min-w-full overflow-hidden rounded-2xl shadow md:rounded-bl-[100px] md:rounded-br-[240px] md:rounded-tl-[240px] md:rounded-tr-[100px]"
+      >
+        <nuxt-img
+          lazy
+          height="540"
+          :alt="alt ?? title"
+          width="540"
+          class="h-full w-full"
+          :src="src"
+        />
       </div>
-
     </div>
-    <div class="lg:col-span-6 xl:col-span-7 grid items-center" :class="{ 'lg:-order-1': reverted}">
+    <div class="grid items-center lg:col-span-6 xl:col-span-7" :class="{ 'lg:-order-1': reverted}">
       <div>
         <div class="grid gap-6">
           <div class="max-md:text-center">
             <nuxa-title>{{ title }}</nuxa-title>
           </div>
-          <div class="text-white text-base font-normal max-md:text-center">
+          <div class="text-base font-normal text-white max-md:text-center">
             <slot />
           </div>
           <slot name="action" />

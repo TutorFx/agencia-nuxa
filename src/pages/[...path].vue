@@ -1,8 +1,8 @@
 <template>
-  <nuxa-container class="grid min-h-full py-12 items-start">
+  <nuxa-container class="grid min-h-full items-start py-12">
     <div class="grid gap-12">
-      <ContentRenderer v-if="data" :value="data" class="min-h-full"></ContentRenderer>
-      <nuxa-title v-else class="min-h-full grid items-center justify-center">
+      <ContentRenderer v-if="data" :value="data" class="min-h-full" />
+      <nuxa-title v-else class="grid min-h-full items-center justify-center">
         Conteúdo não encontrado
       </nuxa-title>
     </div>

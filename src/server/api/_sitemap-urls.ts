@@ -1,10 +1,10 @@
 export default defineEventHandler(async () => {
   const [
-    content,
+    content
   ] = await Promise.all([
-    $fetch('/api/content'),
+    $fetch<{url: string, createdAt: string }[]>('/api/content')
   ])
   return [...content].map((p) => {
-    return { loc: p.url, lastmod: p.updatedAt }
+    return { loc: p.url, lastmod: p.createdAt }
   })
 })

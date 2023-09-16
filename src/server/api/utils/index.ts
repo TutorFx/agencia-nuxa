@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 export const FormSchema = () => z.object({
   nomeEmpresa: z.string().nonempty('Campo obrigatório'),
@@ -9,7 +9,7 @@ export const FormSchema = () => z.object({
   faturamento: z.string(),
   funcionarios: z.string(),
   message: z.string(),
-  cargo: z.string(),
+  cargo: z.string()
 })
 
 export const FormDefaults = () => ({
@@ -20,9 +20,9 @@ export const FormDefaults = () => ({
   celular: '',
   funcionarios: '',
   faturamento: '',
-  message: '',
+  message: ''
 })
 
-const schema = FormSchema();
+const schema = FormSchema()
 
 export type IFormData = z.infer<typeof schema>;

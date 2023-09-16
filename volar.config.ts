@@ -1,5 +1,6 @@
+import service from 'volar-service-vetur';
 module.exports = {
-	services: [
-		require('volar-service-vetur').default(),
-	],
-};
+  services: [
+    service
+  ]
+}

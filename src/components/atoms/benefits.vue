@@ -27,32 +27,34 @@ interface ParsedBenefit extends ParsedContent {
 
 const props = defineProps<{
   modelValue?: string,
-}>();
+}>()
 
 const emits = defineEmits<(e: 'update:modelValue', value?: string) => void>()
 const search = computed({
-  get() {
+  get () {
     return props.modelValue
   },
-  set(value) {
+  set (value) {
     emits('update:modelValue', value)
   }
 })
 
-const { data, refresh } = await useAsyncData('benefits', () => queryContent<ParsedBenefit>('/beneficios').find(), { immediate: true })
+const { data } = await useAsyncData('benefits', () => queryContent<ParsedBenefit>('/beneficios').find(), { immediate: true })
 
-const query = computed(() => data.value?.filter((val, index) => {
+const query = computed(() => data.value?.filter((val) => {
   try {
+    // eslint-disable-next-line
     new ServiceQueryPost(val.title, val.description, val.body, val.image)
   } catch (e) {
+    // eslint-disable-next-line array-callback-return
     if (!(e instanceof Error)) return;
-      console.log(`Unable to display ${val.title} becouse ${e.message}`)
-      return false;
+    console.log(`Unable to display ${val.title} becouse ${e.message}`)
+    return false
   }
-  if (!search.value) return true;
-  if (val.title?.toLowerCase().includes(search.value.toLowerCase())) return true;
-  if (val.description?.toLowerCase().includes(search.value.toLowerCase())) return true;
-  if (JSON.stringify(val.body.children).toLowerCase().includes(search.value.toLowerCase())) return true;
-  return false;
+  if (!search.value) { return true }
+  if (val.title?.toLowerCase().includes(search.value.toLowerCase())) { return true }
+  if (val.description?.toLowerCase().includes(search.value.toLowerCase())) { return true }
+  if (JSON.stringify(val.body.children).toLowerCase().includes(search.value.toLowerCase())) { return true }
+  return false
 }))
 </script>

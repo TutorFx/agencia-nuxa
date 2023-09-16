@@ -2,30 +2,34 @@
   <div>
     <section>
       <div class="relative overflow-hidden">
-        <div class="min-h-screen pt-32 grid gap-48">
-          <nuxa-container class="h-full grid items-center lg:grid-cols-2 gap-6">
+        <div class="grid min-h-screen gap-48 pt-32">
+          <nuxa-container class="grid h-full items-center gap-6 lg:grid-cols-2">
             <div>
               <div class="grid items-start gap-12 py-12 lg:py-24">
-                <nuxa-hero-title class="text-content max-w-2xl text-center md:text-left">
+                <nuxa-hero-title class="max-w-2xl text-center text-content md:text-left">
                   Seu <span class="text-nuxa">sucesso</span> online começa aqui<span class="inline md:hidden">, com nossas
                     soluções inovadoras</span>.
                 </nuxa-hero-title>
-                <div class="text-content max-w-lg text-xl text-center md:text-left max-md:mx-auto">
+                <div class="max-w-lg text-center text-xl text-content max-md:mx-auto md:text-left">
                   Desenvolvemos sites de alta qualidade. Seja para promover o seu negócio, mostrar seu trabalho, abrir a
                   sua
                   loja virtual ou criar um blog, você pode fazer tudo isso com nuxa.
                 </div>
-                <div class="flex gap-6 items-center group justify-center md:justify-start">
-                  <nuxa-button :to="{ name:'contato' }">conheça nossas vantagens</nuxa-button>
+                <div class="group flex items-center justify-center gap-6 md:justify-start">
+                  <nuxa-button :to="{ name:'contato' }">
+                    conheça nossas vantagens
+                  </nuxa-button>
                   <div class="hidden md:block">
-                    <Icon size="64" name="mdi-light:arrow-right"
-                      class="relative transition-all left-0 group-hover:left-6 ease-in-expo duration-300" />
+                    <Icon
+                      size="64"
+                      name="mdi-light:arrow-right"
+                      class="relative left-0 transition-all duration-300 ease-in-expo group-hover:left-6"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="max-lg:order-first h-full">
-            </div>
+            <div class="h-full max-lg:order-first" />
           </nuxa-container>
 
           <nuxa-marqee />
@@ -61,10 +65,14 @@
             </nuxa-content>
           </nuxa-container>
 
-          <nuxa-container class="grid gap-6 md:gap-24 xl:gap-48 md:grid-cols-[max-content_1fr]">
+          <nuxa-container class="grid gap-6 md:grid-cols-[max-content_1fr] md:gap-24 xl:gap-48">
             <div>
-              <nuxa-title class="uppercase">O que fazemos</nuxa-title>
-              <nuxa-title class="uppercase font-thin">na nuxa?</nuxa-title>
+              <nuxa-title class="uppercase">
+                O que fazemos
+              </nuxa-title>
+              <nuxa-title class="font-thin uppercase">
+                na nuxa?
+              </nuxa-title>
             </div>
             <div>
               Combinamos tecnologia de ponta com criatividade e estratégia para criar soluções personalizadas que atendam
@@ -109,7 +117,7 @@
                 Otimize suas operações e reduza custos com um back office eficiente.
               </template>
               <template #action>
-                <nuxa-button to="/beneficios/backoffice" >
+                <nuxa-button to="/beneficios/backoffice">
                   Saiba mais
                 </nuxa-button>
               </template>
@@ -130,14 +138,31 @@
           </nuxa-container>
         </div>
         <div
-          class="grid isloading overflow-hidden absolute top-0 right-0 left-0 -z-[1] aspect-[3/6] sm:aspect-square xl:aspect-[1437/790] pointer-events-none">
-          <nuxt-img fit="cover" width="1437" height="790" class="w-full h-full hidden xl:block"
-            src="/assets/images/hero.png" />
-          <nuxt-img fit="cover" width="790" height="790" class="w-full h-full hidden sm:block xl:hidden"
-            src="/assets/images/hero-tablet.png" />
-          <nuxt-img fit="cover" width="300" height="600" class="w-full h-full block sm:hidden"
-            src="/assets/images/hero-mobile.png" />
+          class="isloading pointer-events-none absolute inset-x-0 top-0 z-[-1] grid aspect-[3/6] overflow-hidden sm:aspect-square xl:aspect-[1437/790]"
+        >
+          <nuxt-img
+            fit="cover"
+            width="1437"
+            height="790"
+            class="hidden h-full w-full xl:block"
+            src="/assets/images/hero.png"
+          />
+          <nuxt-img
+            fit="cover"
+            width="790"
+            height="790"
+            class="hidden h-full w-full sm:block xl:hidden"
+            src="/assets/images/hero-tablet.png"
+          />
+          <nuxt-img
+            fit="cover"
+            width="300"
+            height="600"
+            class="block h-full w-full sm:hidden"
+            src="/assets/images/hero-mobile.png"
+          />
         </div>
       </div>
-  </section>
-</div></template>
+    </section>
+  </div>
+</template>
