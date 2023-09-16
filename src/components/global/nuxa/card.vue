@@ -6,7 +6,7 @@
       class="pointer-events-none absolute -z-10 transition-opacity duration-500"
       :style="{ top: `${mouseWithExtractor.y}px`, left: `${mouseWithExtractor.x}px`, opacity: isHovered && !isButtonHovered ? 1 : 0 }"
     >
-      <div class="relative h-24 w-24 -translate-x-[50%] -translate-y-[50%] rounded-full bg-nuxa" />
+      <div class="relative h-24 w-24 translate-x-[-50%] translate-y-[-50%] rounded-full bg-nuxa" />
     </div>
     <div
       ref="cardEl"

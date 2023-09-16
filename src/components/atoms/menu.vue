@@ -20,7 +20,9 @@ watch(() => useRoute().path, () => {
 
 <template>
   <div>
+    <!-- eslint-disable -->
     <div class="links hidden gap-6 md:flex">
+    <!-- eslint-disable -->
       <nuxt-link v-for="(item, i) in useMenu()" :key="i" :aria-label="`Vá para a página ${item.title}`" :to="item.to">
         <div class="text-xl font-medium leading-tight text-content">
           {{ item.title }}
