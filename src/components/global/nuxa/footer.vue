@@ -63,5 +63,5 @@
 </template>
 
 <script setup lang="ts">
-const { data: footer, refresh } = await useAsyncData('list', () => useFooterMenu(), { immediate: true })
+const { data: footer, refresh } = await useAsyncData('menu', () => useFooterMenu(), { immediate: true })
 </script>

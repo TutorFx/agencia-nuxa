@@ -39,7 +39,7 @@ const search = computed({
   }
 })
 
-const { data, refresh } = await useAsyncData('list', () => queryContent<ParsedBenefit>('/beneficios').find(), { immediate: true })
+const { data, refresh } = await useAsyncData('benefits', () => queryContent<ParsedBenefit>('/beneficios').find(), { immediate: true })
 
 const query = computed(() => data.value?.filter((val, index) => {
   try {
