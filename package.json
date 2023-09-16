@@ -9,7 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.7.2",
+    "@nuxt/content": "^2.8.2",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "1.0.0-rc.1",
     "@tailwindcss/typography": "^0.5.9",
@@ -24,7 +24,6 @@
     "volar-service-vetur": "^0.0.10"
   },
   "dependencies": {
-    "@nuxthq/ui": "^2.7.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
@@ -32,14 +31,12 @@
     "@vueuse/router": "^10.3.0",
     "animate.css": "^4.1.1",
     "googleapis": "^122.0.0",
-    "locomotive-scroll": "^4.1.4",
     "maska": "^2.1.9",
     "moment": "^2.29.4",
     "sass": "^1.64.0",
     "swiper": "^10.1.0",
     "tailwindcss": "^3.3.3",
     "uuid": "^9.0.0",
-    "vue-toastification": "^2.0.0-rc.5",
     "zod": "^3.21.4"
   }
 }

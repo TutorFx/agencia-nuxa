@@ -1,37 +1,39 @@
 <template>
   <div class="">
-    <nuxa-container class="mt-32 py-12 grid gap-6 md:gap-3">
-      <div class="grid md:grid-cols-5 gap-6 max-sm:text-center">
-        <nuxt-link to="/" aria-label="Vá para a homepage da Nuxa">
-          <Icon name="Logo" size="128" class="grayscale hover:grayscale-0" />
-        </nuxt-link>
-        <div v-for="(menu, i) in useFooterMenu()" class="grid gap-1 items-center" :key="i">
+    <nuxa-container class="mt-32 py-12 grid gap-6 md:gap-12">
+      <div class="grid md:grid-cols-3 gap-6 max-sm:text-center">
+        <div class="grid gap-6 max-md:text-center">
+          <Icon name="Logotype" class="w-48 h-16 text-content max-md:mx-auto" />
           <div>
-            <div class="grid gap-6 md:gap-3">
-              <div v-for="(link, x) in menu" :key="`${x}-${i}`">
-                <nuxt-link :to="link.to" :aria-label="`Vá para ${link.title}`">{{ link.title }}</nuxt-link>
+            Na Agência Nuxa, estamos apaixonados por transformar ideias em realidade. Somos uma equipe de
+            especialistas em desenvolvimento web e design, prontos para criar soluções digitais que se destacam.
+            Trabalhamos
+            incansavelmente para tornar a web um lugar mais bonito e funcional. Junte-se a nós nessa jornada digital:
+          </div>
+          <div class="grid items-center max-md:justify-center">
+            <div>
+              <div class="grid gap-6 md:gap-3">
+                <div class="grid grid-flow-col max-sm:text-center justify-start gap-3">
+                  <link-social icon="cib:instagram" url="https://www.instagram.com/" />
+                  <link-social icon="mingcute:meta-fill" url="https://www.meta.com/" />
+                  <link-social icon="cib:github" url="https://www.github.com/" />
+                  <link-social icon="cib:youtube" url="https://www.youtube.com/" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid items-center">
-          <div>
-            <div class="grid items-center gap-6 md:gap-3">
-              <div>
-                Social
-              </div>
-              <div class="grid grid-flow-col max-sm:text-center">
+        <div class="md:col-span-2 grid grid-cols-2 lg:grid-cols-3 text-start gap-y-8 gap-x-2">
+          <div v-for="(menu, i) in footer" class="grid gap-1" :key="i">
+            <div>
+              <div class="grid gap-6 md:gap-3">
                 <div>
-                  <Icon name="cib:instagram"></Icon>
+                  <span class="text-background-50">
+                    {{ i }}
+                  </span>
                 </div>
-                <div>
-                  <Icon name="cib:facebook"></Icon>
-                </div>
-                <div>
-                  <Icon name="cib:github"></Icon>
-                </div>
-                <div>
-                  <Icon name="cib:youtube"></Icon>
+                <div v-for="(link, x) in menu" :key="`${x}-${i}`">
+                  <nuxt-link :to="link.to" :aria-label="`Vá para ${link.title}`">{{ link.title }}</nuxt-link>
                 </div>
               </div>
             </div>
@@ -51,7 +53,7 @@
           </linearGradient>
         </defs>
       </svg>
-      <div class="grid justify-center">
+      <div class="grid justify-center max-sm:text-center">
         <span>
           2023 © Agência Nuxa - All Rights Reserved
         </span>
@@ -59,3 +61,7 @@
     </nuxa-container>
   </div>
 </template>
+
+<script setup lang="ts">
+const { data: footer, refresh } = await useAsyncData('list', () => useFooterMenu(), { immediate: true })
+</script>
