@@ -22,7 +22,8 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-og-image'
   ],
   image: {
     screens: {
