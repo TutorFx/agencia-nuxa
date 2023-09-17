@@ -28,6 +28,7 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "nuxt": "3.7.0",
     "nuxt-icon": "^0.4.2",
+    "nuxt-og-image": "^2.0.28",
     "nuxt-simple-robots": "^3.1.2",
     "nuxt-simple-sitemap": "^3.2.6",
     "prettier": "^3.0.3",
