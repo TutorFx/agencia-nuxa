@@ -41,6 +41,7 @@ defineProps({
 
     <div class="p-12">
       <div>
+        <!-- eslint-disable-next-line tailwindcss/no-custom-classname -->
         <Logotype class="w-26 h-10" />
       </div>
       <div class="relative mt-10 flex h-full flex-col" style="z-index: 10;">
@@ -50,8 +51,7 @@ defineProps({
           </h1>
           <div
             class="max-w-4xl text-5xl leading-tight text-slate-700"
-            v-html="description"
-          />
+          >{{description}}</div>
         </div>
       </div>
     </div>
