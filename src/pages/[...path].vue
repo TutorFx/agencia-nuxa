@@ -12,4 +12,9 @@
 <script setup lang="ts">
 const { path } = useRoute()
 const data = await queryContent().where({ _path: path }).findOne()
+defineOgImage({
+  component: 'OGImageBlog',
+  title: data.title,
+  description: data.description,
+})
 </script>
