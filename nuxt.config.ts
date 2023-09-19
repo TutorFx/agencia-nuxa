@@ -2,12 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Agência Nuxa',
-      meta: [
-        {
-          name: 'description', content: ''
-        }
-      ],
+      titleTemplate: '%s %separator %siteName',
       htmlAttrs: {
         lang: 'pt-BR'
       }
@@ -20,11 +15,20 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-icon',
     '@vueuse/motion/nuxt',
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
+    '@nuxtseo/module',
     '@nuxt/content',
     'nuxt-og-image'
   ],
+  site: {
+    name: 'Agência Nuxa',
+    description: `Na Agência Nuxa, estamos apaixonados por transformar ideias em realidade.
+    Somos uma equipe de especialistas em desenvolvimento web e design, prontos para criar soluções digitais que se destacam.
+    Trabalhamos incansavelmente para tornar a web um lugar mais bonito e funcional.`,
+    identity: {
+      type: 'Organization'
+    },
+    defaultLocale: 'pt-BR',
+  },
   image: {
     screens: {
       xs: 320,

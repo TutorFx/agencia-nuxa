@@ -17,4 +17,13 @@ defineOgImage({
   title: data.title,
   description: data.description,
 })
+useHead({
+  title: data.title, 
+})
+useSchemaOrg([
+  defineArticle({
+    headline: data.title,
+    description: data.description,
+  })
+])
 </script>
