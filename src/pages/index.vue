@@ -16,15 +16,13 @@
                   loja virtual ou criar um blog, você pode fazer tudo isso com nuxa.
                 </div>
                 <div class="group flex items-center justify-center gap-6 md:justify-start">
-                  <nuxa-button :to="{ name:'contato' }">
+                  <nuxa-button :to="{ name: 'contato' }">
                     conheça nossas vantagens
                   </nuxa-button>
                   <div class="hidden md:block">
                     <Icon
-                      size="64"
-                      name="mdi-light:arrow-right"
-                      class="relative left-0 transition-all duration-300 ease-in-expo group-hover:left-6"
-                    />
+                      size="64" name="mdi-light:arrow-right"
+                      class="relative left-0 transition-all duration-300 ease-in-expo group-hover:left-6" />
                   </div>
                 </div>
               </div>
@@ -35,7 +33,9 @@
           <nuxa-marqee />
 
           <nuxa-container class="grid gap-24 lg:gap-12">
-            <nuxa-content title="TECNOLOGIA E INOVAÇÃO" src="/assets/images/vr.jpg" alt="Homem usando óculos de realidade virtual">
+            <nuxa-content
+title="TECNOLOGIA E INOVAÇÃO" src="/assets/images/vr.jpg"
+              alt="Homem usando óculos de realidade virtual">
               No desenvolvimento de sites, a tecnologia e a inovação podem ser aplicadas em várias áreas, como design,
               programação, otimização para mecanismos de busca (SEO) e marketing digital. Por exemplo, a tecnologia nos
               permite criar sites responsivos que se adaptam automaticamente a diferentes tamanhos de tela, enquanto a
@@ -43,13 +43,15 @@
               forma mais performática possível.
               <template #action>
                 <div>
-                  <nuxa-button class="max-sm:block" :to="{ name:'contato' }">
+                  <nuxa-button class="max-sm:block" :to="{ name: 'contato' }">
                     Entrar em contato
                   </nuxa-button>
                 </div>
               </template>
             </nuxa-content>
-            <nuxa-content title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg" alt="Mulher interage com tablet" reverted>
+            <nuxa-content
+title="VELOCIDADE PARA IMPULSIONAR SUAS VENDAS" src="/assets/images/tablet.jpg"
+              alt="Mulher interage com tablet" reverted>
               Um site rápido pode ter um impacto significativo nas vendas, pois os usuários tendem a ficar mais tempo em
               sites que carregam rapidamente e têm uma experiência de navegação mais suave. Além disso, a velocidade do
               site é um dos fatores que o Google leva em consideração ao classificar os resultados de pesquisa, então um
@@ -57,7 +59,7 @@
               orgânico para o seu site.
               <template #action>
                 <div>
-                  <nuxa-button class="max-sm:block" :to="{ name:'contato' }">
+                  <nuxa-button class="max-sm:block" :to="{ name: 'contato' }">
                     Entrar em contato
                   </nuxa-button>
                 </div>
@@ -138,31 +140,26 @@
           </nuxa-container>
         </div>
         <div
-          class="isloading pointer-events-none absolute inset-x-0 top-0 z-[-1] grid aspect-[3/6] overflow-hidden sm:aspect-square xl:aspect-[1437/790]"
-        >
+          class="isloading pointer-events-none absolute inset-x-0 top-0 z-[-1] grid aspect-[3/6] overflow-hidden sm:aspect-square xl:aspect-[1437/790]">
           <nuxt-img
-            fit="cover"
-            width="1437"
-            height="790"
-            class="hidden h-full w-full xl:block"
-            src="/assets/images/hero.png"
-          />
+fit="cover" width="1437" height="790" class="hidden h-full w-full xl:block"
+            src="/assets/images/hero.png" />
           <nuxt-img
-            fit="cover"
-            width="790"
-            height="790"
-            class="hidden h-full w-full sm:block xl:hidden"
-            src="/assets/images/hero-tablet.png"
-          />
+fit="cover" width="790" height="790" class="hidden h-full w-full sm:block xl:hidden"
+            src="/assets/images/hero-tablet.png" />
           <nuxt-img
-            fit="cover"
-            width="300"
-            height="600"
-            class="block h-full w-full sm:hidden"
-            src="/assets/images/hero-mobile.png"
-          />
+fit="cover" width="300" height="600" class="block h-full w-full sm:hidden"
+            src="/assets/images/hero-mobile.png" />
         </div>
       </div>
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+defineOgImage({
+  component: 'OGImageBlog',
+  title: 'Agência Nuxa',
+  description: 'Seu sucesso online começa aqui, com nossas soluções inovadoras',
+})
+</script>
