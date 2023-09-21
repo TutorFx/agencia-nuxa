@@ -28,8 +28,10 @@ const getDocumentos = async () => {
 }
 
 const getBlogPosts = async () => {
-  const data = await queryContent('/blog').find()
-  return data.map(documento => ({ to: documento._path, title: documento.title }))
+  const data = await $fetch<any>('/api/v1/blog')
+  return data.items?.map((item: {fields:{ path: string, title: string }}) => {
+    return ({ to: `/blog/${item.fields.path}`, title: item.fields.title })
+  })
 }
 
 const getBeneficios = async () => {
