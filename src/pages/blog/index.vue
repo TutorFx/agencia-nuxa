@@ -21,20 +21,11 @@
     </section>
     <section>
       <nuxa-container class="py-24">
-        <atoms-benefits v-model="search" />
+        <blog-list />
       </nuxa-container>
     </section>
     <section data-scroll-section>
-      <nuxa-container class="grid gap-6 py-12 lg:grid-cols-2">
-        <div>
-          <nuxa-title class="mb-6">
-            Entre em contato
-          </nuxa-title>
-          <nuxa-paragraph>
-            Preencha o formulário para que
-            possamos<br>agendar um horário e conversar sobre o projeto
-          </nuxa-paragraph>
-        </div>
+      <nuxa-container> 
         <form-fields />
       </nuxa-container>
     </section>
