@@ -34,5 +34,4 @@ if (filteredContent) {
     })
   ]) 
 }
-
 </script>
