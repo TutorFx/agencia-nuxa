@@ -39,12 +39,14 @@ Confira a documentação de implantação para mais informações.
 Para iniciar o projeto, você precisará configurar algumas variáveis de ambiente no arquivo `.env`. Aqui estão as variáveis necessárias:
 
 ```
-private_key: <sua chave privada>
-client_email: <seu email do cliente>
-SHEET_ID: <seu ID da planilha>
+private_key= <sua chave privada>
+client_email= <seu email do cliente>
+SHEET_ID= <seu ID da planilha>
+CTF_SPACE_ID= <Contentful Space ID>
+CTF_CDA_ACCESS_TOKEN= <Contentful Token>
 ```
 
-Substitua `<sua chave privada>`, `<seu email do cliente>` e `<seu ID da planilha>` pelos valores correspondentes.
+Substitua `<sua chave privada>`, `<seu email do cliente>`, `<seu ID da planilha>`, `<Contentful Space ID>` e `<Contentful Token>` pelos valores correspondentes.
 
 ## Como obter as credenciais da API do Google Sheets
 
