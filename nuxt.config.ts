@@ -40,7 +40,10 @@ export default defineNuxtConfig({
       '2xl': 1536
     },
     format: ['webp'],
-    densities: [1, 2, 3]
+    densities: [1, 2, 3],
+    domains: [
+      'images.ctfassets.net'
+    ],
   },
   build: {
     templates: [
@@ -55,7 +58,8 @@ export default defineNuxtConfig({
   css: ['@/assets/styles.scss'],
   routeRules: {
     '/': { isr: true },
-    '/beneficios/**': { isr: true }
+    '/beneficios/**': { isr: true },
+    '/blog/**': { isr: true }
   },
   vite: {
     css: {
@@ -67,6 +71,8 @@ export default defineNuxtConfig({
     }
   },
   runtimeConfig: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
     public: {
       youtube: 'https://www.youtube.com/LuisVazTrader',
       instagram: 'https://instagram.com/oluisvaz',
