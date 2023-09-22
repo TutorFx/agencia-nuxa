@@ -1,4 +1,6 @@
+import type { RouteLocationNormalizedLoaded } from '#vue-router'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { Gtag } from 'nuxt-gtag/dist/runtime/types'
 
 export class ServiceQueryContent {
   static title: string
@@ -21,5 +23,40 @@ export class ServiceQueryPost extends ServiceQueryContent {
     super(title, description, body)
     if (!image) { throw new Error('image cannot be null', { cause: 'it did\'nt got an image' }) }
     ServiceQueryPost.image = image
+  }
+}
+
+export class Analytics {
+  static route: RouteLocationNormalizedLoaded;
+  static project: string = 'Agência Nuxa';
+  static gtag: Gtag;
+  constructor(){
+    const { gtag } = useGtag()
+
+    Analytics.gtag = gtag
+    Analytics.route = useRoute();
+  };
+
+  viewPage(){
+    Analytics.gtag('event', 'screen_view', {
+      app_name: Analytics.project,
+      screen_name: Analytics.route.name
+    })
+  }
+
+  convert(){
+    Analytics.gtag('event', 'generate_lead', {
+      event_category: 'engagement',
+      app_name: Analytics.project,
+      page_location: Analytics.route.path
+    })
+  }
+
+  convertError(e: string){
+    Analytics.gtag('event', e, {
+      event_category: 'error',
+      app_name: Analytics.project,
+      page_location: Analytics.route.path
+    })
   }
 }

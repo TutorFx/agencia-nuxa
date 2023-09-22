@@ -8045,6 +8045,15 @@ nuxi@^3.8.3:
   optionalDependencies:
     fsevents "~2.3.3"
 
+nuxt-gtag@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/nuxt-gtag/-/nuxt-gtag-1.1.1.tgz#2af82e4ca7907658814d44ad6ed8a49c9e5484de"
+  integrity sha512-AkTK++e4vFHyoc04GcRx7dQvx9xchVLav/YAP3aM6oL/ZkZtW50M0/2re4zmPWjeu36ckbpcOHJrj+zptQIMyw==
+  dependencies:
+    "@nuxt/kit" "^3.7.1"
+    defu "^6.1.2"
+    pathe "^1.1.1"
+
 nuxt-icon@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/nuxt-icon/-/nuxt-icon-0.4.2.tgz#040efe9463b06d0d48d8e84702582758a5e76357"
