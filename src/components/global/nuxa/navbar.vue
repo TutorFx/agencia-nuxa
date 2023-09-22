@@ -51,7 +51,7 @@
             <div class="grid justify-center">
               <atoms-menu v-model="menuVisible" />
             </div>
-            <nuxa-button version="outlined" class="hidden lg:block">
+            <nuxa-button :to="{name: 'contato'}" version="outlined" class="hidden lg:block">
               faça um orcamento
             </nuxa-button>
           </nuxa-container>
