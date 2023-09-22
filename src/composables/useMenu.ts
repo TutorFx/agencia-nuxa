@@ -32,7 +32,7 @@ const getDocumentos = async () => {
 }
 
 const getBlogPosts = async () => {
-  const data = await $fetch<any>('/api/v1/blog')
+  const data = await $fetch<any>('/api/v1/blog', { query: { limit: 4 } })
   return data.items?.map((item: {fields:{ path: string, title: string }}) => {
     return ({ to: `/blog/${item.fields.path}`, title: item.fields.title })
   })
