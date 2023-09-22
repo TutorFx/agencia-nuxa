@@ -124,6 +124,7 @@ const nomeResponsavelError = computed(() => getErrors('nomeResponsavel'))
 const emailError = computed(() => getErrors('email'))
 const celularError = computed(() => getErrors('celular'))
 
+const analytics = new Analytics();
 const trigger = async () => {
   isTouched.value = true
   try {
@@ -131,16 +132,20 @@ const trigger = async () => {
     await $fetch('/api/v1/send-form', { body: state.value, method: 'POST' })
     // const toast = useToast();
     // toast.success('Obrigado por inscrever-se')
+    analytics.convert()
     state.value = { ...DefaultValue }
     isTouched.value = false
   } catch (e) {
     if (e instanceof ZodError) {
       console.error('Invalid Form Data')
+      const analytics = new Analytics();
+      analytics.convertError('invalid_form_data')
       // const toast = useToast();
       // toast.error('Dados inválidos')
     };
     if (e instanceof FetchError) {
       console.error('Server Error')
+      analytics.convertError('invalid_form_request')
       // const toast = useToast();
       // toast.error('Ocorreu um erro ao enviar dados')
     };

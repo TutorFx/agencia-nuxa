@@ -44,6 +44,7 @@ client_email= <seu email do cliente>
 SHEET_ID= <seu ID da planilha>
 CTF_SPACE_ID= <Contentful Space ID>
 CTF_CDA_ACCESS_TOKEN= <Contentful Token>
+GTAG_TOKEN= <Google Analytics Token>
 ```
 
 Substitua `<sua chave privada>`, `<seu email do cliente>`, `<seu ID da planilha>`, `<Contentful Space ID>` e `<Contentful Token>` pelos valores correspondentes.

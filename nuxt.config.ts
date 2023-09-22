@@ -17,8 +17,12 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     '@nuxtseo/module',
     '@nuxt/content',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'nuxt-gtag'
   ],
+  gtag: {
+    id: process.env.GTAG_TOKEN
+  },
   site: {
     name: 'Agência Nuxa',
     description: `Na Agência Nuxa, estamos apaixonados por transformar ideias em realidade.
