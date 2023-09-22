@@ -18,6 +18,10 @@ export const useMenu = () => {
     {
       title: 'Benefícios',
       to: { name: 'beneficios' }
+    },
+    {
+      title: 'Blog',
+      to: { name: 'blog' }
     }
   ] as MenuType[]
 }
