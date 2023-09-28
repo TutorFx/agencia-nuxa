@@ -1,6 +1,7 @@
 <template>
   <div v-if="content && !error" class="grid gap-6 md:grid-cols-3">
-    <nuxt-link v-for="(post, i) in content.items" :key="i"
+    <nuxt-link
+      v-for="(post, i) in content.items" :key="i"
       class="grid grid-rows-[max-content_1fr] overflow-hidden rounded-lg" :to="`/blog/${post.fields.path ?? ''}`">
       <!-- eslint-disable-next-line tailwindcss/classnames-order -->
       <div class="aspect-video isloading grid items-center justify-center overflow-hidden">
