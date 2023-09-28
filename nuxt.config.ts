@@ -63,7 +63,8 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { isr: true },
     '/beneficios/**': { isr: true },
-    '/blog/**': { isr: true }
+    '/blog/**': { isr: true },
+    '/blog': { isr: true }
   },
   vite: {
     css: {
